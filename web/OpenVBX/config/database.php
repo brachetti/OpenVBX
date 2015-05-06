@@ -2,6 +2,13 @@
 $active_group = 'default';
 $active_record = TRUE;
 $dbopts = parse_url(getenv('DATABASE_URL'));
+if (0 === count($dbopts)) {
+  $dbopts = parse_url(getenv('CLEARDB_DATABASE_URL'));
+}
+if (0 === count($dbopts)) {
+  throw new Exception("Missing database url);
+}
+
 $db['default']['username'] = $dbopts["user"];
 $db['default']['password'] = $dbopts["pass"];
 $db['default']['hostname'] = $dbopts["host"];
