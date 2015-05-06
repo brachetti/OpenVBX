@@ -2,10 +2,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 $dbopts = parse_url(getenv('DATABASE_URL'));
-if (0 === count($dbopts)) {
+if (1 === count($dbopts)) {
   $dbopts = parse_url(getenv('CLEARDB_DATABASE_URL'));
 }
-if (0 === count($dbopts)) {
+if (1 === count($dbopts)) {
   throw new Exception("Missing database url);
 }
 
