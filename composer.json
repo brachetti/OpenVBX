@@ -1,0 +1,14 @@
+{
+    "name": "rbrachetti/openvbx",
+    "description": "Heroku compliant fork of twilio/openvbx",
+    "require-dev": {
+        "heroku/heroku-buildpack-php": "~67.0"
+    },
+    "authors": [
+        {
+            "name": "Ronald Brachetti",
+            "email": "ronald.brachetti@gmail.com"
+        }
+    ],
+    "require": {}
+}
