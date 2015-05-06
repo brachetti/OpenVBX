@@ -6,7 +6,7 @@ if (1 === count($dbopts)) {
   $dbopts = parse_url(getenv('CLEARDB_DATABASE_URL'));
 }
 if (1 === count($dbopts)) {
-  throw new Exception("Missing database url);
+  throw new Exception("Missing database url");
 }
 
 $db['default']['username'] = $dbopts["user"];
